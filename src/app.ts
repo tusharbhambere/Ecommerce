@@ -22,17 +22,17 @@ createConnection(config as ConnectionOptions)
     const port = process.env.PORT || 8080;
     app.set("port", port);
     app.get("/", (req, res) => {
-      res.send("SHOPEX API");
+      res.send("Custom Eccomerce");
     });
 
     //! Authentication routes
-    app.use("/user", authrouter);
+    app.use("/userAuth", authrouter);
 
     //! Product routes
-    app.use("/products", productrouter);
+    app.use("/item", productrouter);
 
     //! Cart routes
-    app.use("/cart", cartrouter);
+    app.use("/cartItem", cartrouter);
 
     //! Userinfo routes
     app.use("/info", inforouter);
