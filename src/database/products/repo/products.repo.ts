@@ -54,12 +54,11 @@ export class ProductRepository extends Repository<ProductEntity> {
           received: true,
         });
       }
-      return res.send({
-        data: products,
-        filled: true,
-        received: true,
+      return res.send(
+   products,
 
-      });
+
+      );
     } else {
       return res.send({
         data: "No products available",
