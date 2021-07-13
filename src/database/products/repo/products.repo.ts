@@ -55,8 +55,13 @@ export class ProductRepository extends Repository<ProductEntity> {
         });
       }
       return res.send(
-   products,
+  
+{
+  data:products,
+  filled: true,
+          received: true,
 
+}
 
       );
     } else {
